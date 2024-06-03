@@ -61,7 +61,6 @@ class _AuthScreenState extends State<AuthScreen> {
           'email': _enteredEmail,
           //'image_url': imageUrl,
         });
-
         await storageRef.putFile(_selectedImage!);
         final imageUrl = await storageRef.getDownloadURL();
       }

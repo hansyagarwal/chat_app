@@ -21,16 +21,16 @@ class ChatMessages extends StatelessWidget {
             child: CircularProgressIndicator(),
           );
         }
-        final a = chatSnapshots.data;
-        final b = a!.docs;
-        print('hello');
-        print(b);
-        FirebaseFirestore.instance
-            .collection('chat')
-            .doc('5ZgqLK6hzraUsbynUqqr')
-            .get()
-            .then((value) => print(value.data()!['text']));
-        print('hello2');
+        // final a = chatSnapshots.data;
+        // final b = a!.docs;
+        // print('hello');
+        // print(b);
+        // FirebaseFirestore.instance
+        //     .collection('chat')
+        //     .doc('5ZgqLK6hzraUsbynUqqr')
+        //     .get()
+        //     .then((value) => print(value.data()!['text']));
+        // print('hello2');
         if (!chatSnapshots.hasData || chatSnapshots.data!.docs.isEmpty) {
           return const Center(
             child: Text('No messages found.'),

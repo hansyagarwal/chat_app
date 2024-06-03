@@ -38,7 +38,7 @@ class _NewMessageState extends State<NewMessage> {
     //send to firebase;
     FirebaseFirestore.instance.collection('chat').add({
       'text': enteredMessage,
-      'createAt': Timestamp.now(),
+      'createdAt': Timestamp.now(),
       'userId': user.uid,
       'username': userData.data()!['username'],
       //'userImage': userData.data()!['image_url'],
